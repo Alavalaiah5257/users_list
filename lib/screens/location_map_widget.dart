@@ -99,14 +99,8 @@ class _LocationMapWidgetState extends State<LocationMapWidget> {
           : (currentLatLng == null)
           ? const Center(child: Text("Failed to get location")) // safety check
           : FlutterMap(
-        options: MapOptions(
-            center: LatLng(main.lat, main.long),
-            zoom: 14,
-            maxZoom: 18,
-            minZoom: 10,
-            onPositionChanged: (mapPosition, boolValue){
-              _lastposition = mapPosition.center;
-            }),
+        options: MapOptions(),
+
         children: [
           TileLayer(
             urlTemplate:
