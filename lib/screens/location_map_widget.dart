@@ -89,9 +89,10 @@ class _LocationMapWidgetState extends State<LocationMapWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(left: 40),
+     // margin: const EdgeInsets.only(left: 40),
       width: 300,
       height: 200,
+      // decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
       child: _isLoading
           ? const Center(child: CircularProgressIndicator()) // Show loader
           : _errorMessage != null
